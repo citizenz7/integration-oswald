@@ -14,7 +14,7 @@
   <header>
     <div class="container-flex">
       <div class="">
-        <a class="" href="#"> <img src="img/logo.png" alt="logo"></a>
+        <a class="" href="#"> <img class="responsive" src="img/logo.png" alt="logo"></a>
       </div>
       <div class="">
         <a class="text-white" href="index.php">Subscribe</a>
@@ -24,7 +24,7 @@
 
     <div class="container-flex2">
       <div class="phone">
-        <img class="" src="img/phone.png" alt="phone">
+        <img class="responsive" src="img/phone.png" alt="phone">
       </div>
       <div class="info">
         <h1 class="sectiontext">Join more than <span class="text-white">1000+</span><br>satisfied users</h1>
@@ -53,13 +53,13 @@
     <div class="">
       <div class="slideshow-container">
         <div class="mySlides sliderpos fade">
-          <img src="img/slide.png" style="">
+          <img class="responsive" src="img/slide.png" style="">
         </div>
         <div class="mySlides sliderpos fade">
-          <img src="img/slide2.png" style="">
+          <img class="responsive" src="img/slide2.png" style="">
         </div>
         <div class="mySlides sliderpos fade">
-          <img src="img/slide3.png" style="">
+          <img class="responsive" src="img/slide3.png" style="">
         </div>
       </div>
       <br>
@@ -73,14 +73,23 @@
     </div>
   </div>
 
+
   <div class="container-flex4">
-    <div class="">
-      <h1 class="text-white">Some words from our owners</h1>
-      <p class="text-center">People are definitely a compagny's greatest asset.<br>It dosen't make any difference</p>
+    <div>
+      <h1 class="text-white sectiontitle">Some words from our owners</h1>
+      <div class="text-center sectiontext">
+        People are definitely a compagny's greatest asset.<br>It dosen't make any difference
+      </div>
     </div>
-    <div id="img-right" class="col-sm second"><img src="img/phone2.png" alt="phone">
+  </div>
+
+  <div class="container-flex4">
+    <div class="first">
+      <div id="img-right" class="second">
+        <img class="responsive" src="img/phone2.png" alt="phone">
+      </div>
     </div>
-    <div class="col-sm first">
+    <div class="second">
       <div class="headertext text-black">
         <div class="speech-bubble">
           <div class="quot">&quot;</div>
@@ -108,62 +117,64 @@
     </div>
   </div>
 
-    <footer>
-      <img class="" src="img/logofooter.png" alt="logo">
-      <p>
-        © 2016-<span class="nordfooter">NORD</span> All Right Reserved
-      </p>
-    </footer>
+  <footer>
+    <div>
+      <img class="responsive sectiontitle" src="img/logofooter.png" alt="logo">
+    </div>
+    <div>
+      © 2016-<span class="nordfooter">NORD</span> All Right Reserved
+    </div>
+  </footer>
 
 
-    <script>
-      var slideIndex = 1;
-      showSlides(slideIndex);
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
 
-      function plusSlides(n) {
-        showSlides(slideIndex += n);
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {
+        slideIndex = 1
       }
-
-      function currentSlide(n) {
-        showSlides(slideIndex = n);
+      if (n < 1) {
+        slideIndex = slides.length
       }
-
-      function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-          slideIndex = 1
-        }
-        if (n < 1) {
-          slideIndex = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
       }
-      var slideIndex = 0;
-      showSlides();
-
-      function showSlides() {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {
-          slideIndex = 1
-        }
-        slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
       }
-    </script>
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1
+      }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+  </script>
 </body>
 
 </html>
