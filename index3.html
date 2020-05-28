@@ -27,32 +27,143 @@
         <img class="" src="img/phone.png" alt="phone">
       </div>
       <div class="info">
-        <h1>Join more than <span class="text-white">1000+</span><br>satisfied users</h1>
-        <p class="text-white">
+        <h1 class="sectiontext">Join more than <span class="text-white">1000+</span><br>satisfied users</h1>
+        <p class="text-white sectiontext">
           <a class="">People are definitely a compagny's greatest asset.<br>It dosen't make any difference<br> wheter the product is cars or cosmetics.
             <br>
             A compagny is only as good as the people it keeps.</a>
         </p>
-        <a href="index.php"><img class="androidbutton py-5" src="img/androidappbutton.png" alt="android application download" /></a>
+        <a href="index3.html"><img class="androidbutton" src="img/androidappbutton.png" alt="android application download" /></a>
       </div>
     </div>
   </header>
 
+  <div class="container-flex3">
+    <div class="">
+      <h1 class="text-white sectiontitle">What you Get</h1>
+      <div class="text-white sectiontext">
+        People are definitely a compagny's greatest asset.<br>It dosen't make any difference<br> wheter the product is cars or cosmetics.<br>
+        A compagny is only as good as the people it keeps.
+      </div>
+      <div class="">
+        <button class="buttona"><a href="index3.html">GET IT NOW</a></button>
+      </div>
+    </div>
 
-  <div class="whatyouget">
+    <div class="">
+      <div class="slideshow-container">
+        <div class="mySlides sliderpos fade">
+          <img src="img/slide.png" style="">
+        </div>
+        <div class="mySlides sliderpos fade">
+          <img src="img/slide2.png" style="">
+        </div>
+        <div class="mySlides sliderpos fade">
+          <img src="img/slide3.png" style="">
+        </div>
+      </div>
+      <br>
 
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+
+    </div>
   </div>
 
-  <div class="somewords">
-
+  <div class="container-flex4">
+    <div class="">
+      <h1 class="text-white">Some words from our owners</h1>
+      <p class="text-center">People are definitely a compagny's greatest asset.<br>It dosen't make any difference</p>
+    </div>
+    <div id="img-right" class="col-sm second"><img src="img/phone2.png" alt="phone">
+    </div>
+    <div class="col-sm first">
+      <div class="headertext text-black">
+        <div class="speech-bubble">
+          <div class="quot">&quot;</div>
+          <p class="flextexte">People are definitely a compagny's greatest asset.It dosen't make<br>
+            any difference wheter the product is cars or cosmetics.<br>
+            A compagny is only as good as the people it keeps.<br>
+            <span class="johndoe"> John Doe</span>
+          </p>
+          <div id="quote-right" class="quot">&quot;</div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="joinus">
-
+  <div class="container-flex5">
+    <h1 class="">Join us</h1>
+    <p class="">
+      we will send you from time to time<br>mail about our news and offers
+    </p>
+    <div class="form-group">
+      <form>
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Your Mail">
+        <button type="submit" class="buttonb">SEND</button>
+      </form>
+    </div>
   </div>
 
-  <footer>
+    <footer>
+      <img class="" src="img/logofooter.png" alt="logo">
+      <p>
+        © 2016-<span class="nordfooter">NORD</span> All Right Reserved
+      </p>
+    </footer>
 
 
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
 
-  </footer>
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1
+        }
+        if (n < 1) {
+          slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
+</body>
+
+</html>
