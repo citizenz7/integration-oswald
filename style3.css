@@ -1,13 +1,3 @@
-@media only screen and (max-width:480px) {
-  .container-flex2 .container-flex3 .container-flex4 .container-flex5 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    margin-top: 3rem;
-  }
-}
 
 /*----- HEADER -----*/
 header {
@@ -24,7 +14,7 @@ header {
   color: white;
 }
 
-.text-center{
+.text-center {
   text-align: center;
 }
 
@@ -88,7 +78,7 @@ header {
   padding-bottom: 40px;
 }
 
-.sectiontitle{
+.sectiontitle {
   padding-bottom: 40px;
 }
 
@@ -295,12 +285,23 @@ footer {
   padding-bottom: 55px;
 }
 
-.buttonb{
-  background-color: rgba(250,250,255,1) !important;
-  border-color: rgba(250,250,255,1) !important;
+.buttonb {
+  background-color: rgba(250, 250, 255, 1) !important;
+  border-color: rgba(250, 250, 255, 1) !important;
   border-radius: 0 !important;
-  color: rgb(65, 224, 216)!important;
+  color: rgb(65, 224, 216) !important;
   padding-left: 2.5rem !important;
   padding-right: 2.5rem !important;
   padding-bottom: 5rem;
+}
+
+@media screen and (max-width:380px) {
+  main, .container-flex, .container-flex2, .container-flex3, .container-flex4, .container-flex5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 3rem;
+  }
 }
