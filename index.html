@@ -6,145 +6,136 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Integration maquette Oswald par Olivier</title>
   <link rel="stylesheet" href="normalize.css">
-  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="style3.css">
 </head>
 
 <body>
 
-  <!-- header -->
-  <header>
-    <div class="container box nav">
-      <div>
-        <img class="right" src="img/logo.png" alt="logo">
-      </div>
-      <div class="right">
-        <span class="text-white">Subscribe</span> <button class="buttonSubscribe">Get it now</button>
-      </div>
-    </div>
+  <main>
 
-    <div class="container headercontainer box">
-      <div class="one">
-        <img class="imgheader imgleft responsive" src="img/phone.png" alt="phone">
-      </div>
-      <div class="two">
-        <h1>
-          Join more than <span class="text-white">1000+</span>
-          <br> satisfied users
-        </h1>
-        <p class="text-white resptext">People are definitely a compagny's greatest asset.<br>
-          It dosen't make any difference<br> wheter the product is cars or cosmetics.<br>
-          A compagny is only as good as the people it keeps.
-        </p>
-        <a href="index.php">
-          <img class="androidbutton" src="img/androidappbutton.png" alt="android">
-        </a>
-      </div>
-    </div>
-    </div>
-  </header>
-  <!-- //header -->
-
-  <!-- article 1 -->
-  <div class="article1">
-    <div class="container">
-
-      <div class="row box nav2">
-        <div class="sectiontext text-white">
-          <h1 class="sectiontitle text-white">What you Get</h1>
-          <div class="sectiontext2">
-            <a>People are definitely a compagny's greatest asset.<br>It dosen't make any difference<br> wheter the product is cars or cosmetics.<br>
-              A compagny is only as good as the people it keeps.</a>
-          </div>
-          <div>
-            <a href="#"><button class="buttonGet">GET IT NOW</button></a>
-          </div>
-        </div>
-
-        <!-- slideshow -->
-        <div>
-          <div class="slideshow-container">
-            <div class="mySlides sliderpos fade">
-              <img class="responsive" src="img/slide.png" style="">
-            </div>
-            <div class="mySlides sliderpos fade">
-              <img class="responsive" src="img/slide2.png" style="">
-            </div>
-            <div class="mySlides sliderpos fade">
-              <img class="responsive" src="img/slide3.png" style="">
-            </div>
-          </div>
-          <br>
-          <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- section article 2 -->
-  <div class="article2">
-    <div class="container">
-      <div class="row box nav2">
+    <header>
+      <div class="container-flex">
         <div class="">
-          <h1 class="text-white a2title">Some words from our owners</h1>
-          <p class="">People are definitely a compagny's greatest asset.<br>It dosen't make any difference</p>
-          <div>
-            <img class="responsive" src="img/phone2.png" alt="phone">
+          <a class="" href="#"> <img class="responsive" src="./img/logo.png" alt="logo"></a>
+        </div>
+        <div class="">
+          <a class="text-white" href="index3.html">Subscribe</a>
+          <!--<a class="text-decoration-none" href="index3.html"><button class="buttona">Get It Now</button></a>-->
+          <input type="button" class="buttona" value="GET IT NOW" onClick="javascript:location.href = 'index3.html';">
+        </div>
+      </div>
+
+      <div class="container-flex2">
+        <div class="phone">
+          <img class="responsive" src="./img/phone.png" alt="phone">
+        </div>
+        <div class="info">
+          <h1 class="sectiontext">Join more than <span class="text-white">1000+</span><br>satisfied users</h1>
+          <p class="text-white sectiontext">
+            <a class="">People are definitely a compagny's greatest asset.<br>It dosen't make any difference<br> wheter the product is cars or cosmetics.
+              <br>
+              A compagny is only as good as the people it keeps.</a>
+          </p>
+          <a href="index3.html"><img class="androidbutton" src="./img/androidappbutton.png" alt="android application download" /></a>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-flex3">
+      <div>
+        <h1 class="text-white sectiontitle">What you Get</h1>
+        <div class="text-white sectiontext whatyougetr">
+          People are definitely a compagny's greatest asset.<br>It dosen't make any difference<br> wheter the product is cars or cosmetics.<br>
+          A compagny is only as good as the people it keeps.
+        </div>
+        <div class="whatyougetl">
+          <!--<a class="text-decoration-none" href="index3.html"><button class="buttona">GET IT NOW</button></a>-->
+          <input type="button" class="buttona" value="GET IT NOW" onClick="javascript:location.href = 'index3.html';" />
+        </div>
+      </div>
+
+      <div class="">
+        <div class="slideshow-container">
+          <div class="mySlides sliderpos fade">
+            <img class="responsive" src="./img/slide.png" alt="slide1">
+          </div>
+          <div class="mySlides sliderpos fade">
+            <img class="responsive" src="./img/slide2.png" alt="slide2">
+          </div>
+          <div class="mySlides sliderpos fade">
+            <img class="responsive" src="./img/slide3.png" alt="slide2">
           </div>
         </div>
+        <br>
 
-        <div class="container headercontainer">
-          <div class="first">
-            <div class="headertext text-black">
-              <div class="speech-bubble">
-                <div class="quot">&quot;</div>
-                <p class="resptext">People are definitely a compagny's greatest asset. It dosen't<br>make
-                  any difference wheter the product is cars or cosmetics.<br>
-                  A compagny is only as good as the people it keeps.<br>
-                  <span class="johndoe"> John Doe</span>
-                </p>
-                <div id="quote-right" class="quot">&quot;</div>
-              </div>
-            </div>
-          </div>
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
         </div>
 
       </div>
     </div>
-  </div>
 
-  <!-- Section join us -->
-  <div class="joinus">
-    <div class="container">
-      <div class="row box3">
+    <div class="container-flex4">
+      <div>
+        <h1 class="text-white sectiontitle">Some words from our owners</h1>
+        <div class="text-center sectiontext">
+          People are definitely a compagny's greatest asset.<br>It dosen't make any difference
+        </div>
+      </div>
+    </div>
 
-        <h1 class="titrejoinus">Join us</h1>
-        <p class="p2">
-          we will send you from time to time<br>
-          mail about our news and offers
+    <div class="container-flex4">
+      <div class="first">
+        <div id="img-right" class="second">
+          <img class="responsive" src="./img/phone2.png" alt="phone">
+        </div>
+      </div>
+      <div class="second">
+        <div class="headertext text-black">
+          <div class="speech-bubble">
+            <div class="quot">&quot;</div>
+            <p class="flextexte">People are definitely a compagny's greatest asset.It dosen't make<br>
+              any difference wheter the product is cars or cosmetics.<br>
+              A compagny is only as good as the people it keeps.<br>
+              <span class="johndoe"> John Doe</span>
+            </p>
+            <div id="quote-right" class="quot">&quot;</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-flex5">
+      <div>
+        <h1 class="text-white">Join us</h1>
+        <p class="text-white">
+          we will send you from time to time<br>mail about our news and offers
         </p>
-
-        <div>
-          <form class="form-group">
-            <input type="email" class="form-control" placeholder="Your Mail">
-            <button type="submit" class="buttonb">SEND</button>
-          </form>
-        </div>
-
+      </div>
+      <div>
+      <div>
+        <form class="form-group">
+          <input type="email" class="form-control" placeholder="Your Mail">
+          <button type="submit" class="">SEND</button>
+        </form>
       </div>
     </div>
-  </div>
+    </div>
 
-  <!-- footer -->
+  </main>
+
   <footer>
-    <img src="img/logofooter.png" alt="logo">
-    <p>
+    <div>
+      <img class="responsive sectiontitle" src="./img/logofooter.png" alt="logo">
+    </div>
+    <div>
       © 2016-<span class="nordfooter">NORD</span> All Right Reserved
-    </p>
+    </div>
   </footer>
+
+
 
   <script>
     var slideIndex = 1;
@@ -194,6 +185,8 @@
       setTimeout(showSlides, 2000); // Change image every 2 seconds
     }
   </script>
+
+
 </body>
 
 </html>
